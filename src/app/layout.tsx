@@ -18,9 +18,7 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: "Pitch A Friend — App Concept",
   description: "讓最了解你的人，替你找到對的人。以好友推薦為核心的全新約會體驗。",
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"
-  ),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL!),
 };
 
 export default function RootLayout({
