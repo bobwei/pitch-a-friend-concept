@@ -29,16 +29,11 @@ export default async function Image() {
     fetchFont(FRAUNCES_ITALIC_URL),
   ]);
 
-  const fonts: {
-    name: string;
-    data: ArrayBuffer;
-    weight: number;
-    style: "normal" | "italic";
-  }[] = [];
+  const fonts = [];
   if (frauncesBold)
-    fonts.push({ name: "Fraunces", data: frauncesBold, weight: 900, style: "normal" });
+    fonts.push({ name: "Fraunces", data: frauncesBold, weight: 900 as const, style: "normal" as const });
   if (frauncesItalic)
-    fonts.push({ name: "Fraunces", data: frauncesItalic, weight: 900, style: "italic" });
+    fonts.push({ name: "Fraunces", data: frauncesItalic, weight: 900 as const, style: "italic" as const });
 
   return new ImageResponse(
     (
